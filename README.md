@@ -15,7 +15,7 @@ The system is built using n8n workflows, integrating APIs, custom data processin
 
 🏗️ Workflow Architecture
 
-![Architecture](Screenshot 2026-05-02 201050.png)
+![Architecture](workflow.png)
 
 ⚙️ Detailed Workflow
 🟢 1. Stock Pipeline
