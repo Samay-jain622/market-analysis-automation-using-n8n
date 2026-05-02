@@ -22,11 +22,11 @@ The system is built using n8n workflows, integrating APIs, custom data processin
               ┌───────────────────┴───────────────────┐
               │                                       │
       ┌───────▼────────┐                     ┌────────▼────────┐
-      │  STOCK PIPELINE │                     │ INDEX PIPELINE  │
+      │  STOCK PIPELINE │                    │ INDEX PIPELINE  │
       └───────┬────────┘                     └────────┬────────┘
               │                                       │
    ┌──────────▼──────────┐               ┌────────────▼──────────┐
-   │ Fetch Tickers (Sheet)│               │ Fetch Indices (Sheet)│
+   │ Fetch Tickers (Sheet)│              │ Fetch Indices (Sheet)│
    └──────────┬──────────┘               └────────────┬──────────┘
               │                                       │
    ┌──────────▼──────────┐               ┌────────────▼──────────┐
