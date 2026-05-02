@@ -15,46 +15,7 @@ The system is built using n8n workflows, integrating APIs, custom data processin
 
 🏗️ Workflow Architecture
 
-                        ┌────────────────────┐
-                        │   Workflow Trigger │
-                        └─────────┬──────────┘
-                                  │
-              ┌───────────────────┴───────────────────┐
-              │                                       │
-      ┌───────▼────────┐                     ┌────────▼────────┐
-      │  STOCK PIPELINE │                    │ INDEX PIPELINE  │
-      └───────┬────────┘                     └────────┬────────┘
-              │                                       │
-   ┌──────────▼──────────┐               ┌────────────▼──────────┐
-   │ Fetch Tickers (Sheet)│              │ Fetch Indices (Sheet)│
-   └──────────┬──────────┘               └────────────┬──────────┘
-              │                                       │
-   ┌──────────▼──────────┐               ┌────────────▼──────────┐
-   │ Yahoo Finance API   │               │ Yahoo Finance API     │
-   └──────────┬──────────┘               └────────────┬──────────┘
-              │                                       │
-   ┌──────────▼──────────┐               ┌────────────▼──────────┐
-   │ Data Processing     │               │ Data Processing       │
-   │ (returns, stats)    │               │ (index stats)         │
-   └──────────┬──────────┘               └────────────┬──────────┘
-              │                                       │
-   ┌──────────▼──────────┐               ┌────────────▼──────────┐
-   │ Stock Analysis LLM  │               │ Index Analysis LLM    │
-   └──────────┬──────────┘               └────────────┬──────────┘
-              └──────────────┬────────────────────────┘
-                             │
-                     ┌───────▼────────┐
-                     │   MERGE NODE   │
-                     └───────┬────────┘
-                             │
-                     ┌───────▼────────┐
-                     │ FINAL LLM      │
-                     │ (Market Report)│
-                     └───────┬────────┘
-                             │
-                     ┌───────▼────────┐
-                     │ EMAIL DELIVERY │
-                     └────────────────┘
+![Architecture](Screenshot 2026-05-02 201050.png)
 
 ⚙️ Detailed Workflow
 🟢 1. Stock Pipeline
